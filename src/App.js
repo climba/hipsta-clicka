@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import friends from './friends.json';
 import {Jumbotron, Grid, Row, Panel, Col} from 'react-bootstrap';
-import logo from './logo.svg';
+import top from './top.jpg';
 import './App.css';
 
 const style = {
-  'height':'200px'
+  'height':'200px',
+  'text': 'center'
 }
 
 class App extends Component {
@@ -66,12 +67,12 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <img src={top} className="App-top" alt="top" />
         </header>
         <Grid>
           <Jumbotron>
-            <h2>Your score is: {this.state.score} </h2>
+            <h2>Bondi Hipsters Clicker Game!</h2>
+            <h4>Your score is: {this.state.score} </h4>
           </Jumbotron>
           <Row>
             {this.state.friends.map(friend => {
@@ -82,7 +83,7 @@ class App extends Component {
                     {friend.name}
                   </Panel.Heading>
                   <Panel.Body>
-                    <img src={friend.image} style={style} className='img-responsive' alt={friend.name} />
+                    <img src={friend.image} style={style} className='img-responsive center-block' alt={friend.name} />
                   </Panel.Body>
                 </Panel>
               </Col>
