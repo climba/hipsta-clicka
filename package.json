@@ -1,9 +1,12 @@
 {
   "name": "hipsta-clicka",
   "version": "1.0.0",
+  "homepage": "https://climba.github.io/hipsta-clicka/",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -14,16 +17,18 @@
     "url": "git+https://github.com/climba/hipsta-clicka.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "mike white",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/climba/hipsta-clicka/issues"
   },
-  "homepage": "https://github.com/climba/hipsta-clicka#readme",
   "dependencies": {
     "react": "^16.4.1",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0"
   }
 }
